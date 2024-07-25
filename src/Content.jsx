@@ -1,6 +1,7 @@
 import { useState, useRef } from "react"; // what is useRef?
 import PersonalInfo from "./Components/CVForm/PersonalInfo";
 import Preview from "./Components/CVPreview/preview";
+import Experience from "./Components/CVForm/experience";
 
 export default function Content() {
     let componentRef = null;
@@ -11,6 +12,7 @@ export default function Content() {
     const [address, setAddress] = useState(null);
     const [email, setEmail] = useState(null);
     const [phoneNumber, setPhoneNumber] = useState(null);
+    const [experience, setExperience] = useState([]);
 
     function onFirstName(event) {
         setFirstName(event.target.value);
@@ -40,6 +42,52 @@ export default function Content() {
         setPhoneNumber(event.target.value);
     }
 
+    function addExperience(e) {
+        e.preventDefault();
+        console.log(e.target[0].value);
+        // no uuid
+        const position = e.target[0].value;
+        const company = e.target[1].value;
+        const start = e.target[2].value;
+        const end = e.target[3].value;
+        const desc = e.target[4].value;
+
+        let newExperience = {id, position, company, start, end, desc};
+        setExperience([...experience, newExperience]);
+        clear(e);
+    }
+
+    function clear(e) {
+        for (let i=0; i<e.target.length; i++) {
+            e.target[i].value = "";
+        }
+    }
+
+    function deleteExperience(id) {
+        console.log(id);
+        setExperience((currentExperience) => {
+            return currentExperience.filter((exp) => exp.id !== id);
+        })
+    }
+
+    function saveExperience(e, id) {
+        e.preventDefault();
+        let position = e.target[0].value;
+        let company = e.target[1].value;
+        let start = e.target[2].value;
+        let end = e.target[3].value;
+        let desc = e.target[4].value;
+        let updateExp = {position, company, start, end, desc};
+        setExperience(
+            experience.map((exp) => {
+                if (exp.id === id) {
+                    return {...exp, ...updateExp};
+                } else {
+                    return exp;
+                }
+            })
+        );
+    }
 
 
     return (
@@ -55,9 +103,18 @@ export default function Content() {
                         onAddress={onAddress}
                         onPhoneNumber={onPhoneNumber}
                     />
+
+                    <Experience
+                        onSubmit={addExperience}
+                        deleteExperience={deleteExperience}
+                        experience={experience}
+                        saveExperience={saveExperience}
+                    />
+
                 </section>
 
                 <div className="preview">
+                    {/* add component ref on top */}
                     <Preview
                         firstName={firstName}
                         lastName={lastName}
@@ -66,6 +123,7 @@ export default function Content() {
                         description={decription}
                         address={address}
                         email={email}
+                        experience={experience}
                     />
                 </div>
             </div>

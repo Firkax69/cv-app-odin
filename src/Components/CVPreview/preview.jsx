@@ -1,7 +1,7 @@
 // import PreviewEducation from "./PreviewEducation";
-// import PreviewExperience from "./PreviewExperience";
+import PreviewExperience from "./PreviewExperience";
 import PreviewPersonal from "./PreviewPersonal";
-// import "./style.css";
+import "./preview.css";
 
 export default function Preview({
     firstName,
@@ -11,9 +11,9 @@ export default function Preview({
     email,
     phoneNumber,
     description,
-    //   experience,
-    //   deleteExperience,
-    //   editExperience,
+    experience,
+    deleteExperience,
+    editExperience,
     //   education,
 }){
     return (
@@ -27,6 +27,26 @@ export default function Preview({
                 phoneNumber={phoneNumber}
                 description={description}
             />
+
+            <h2>Experience</h2>
+            {experience.map((exp) => {
+                return (
+                <PreviewExperience
+                    key={exp.id}
+                    deleteExperience={deleteExperience}
+                    editExperience={editExperience}
+                    id={exp.id}
+                    position={exp.position}
+                    company={exp.company}
+                    start={exp.start}
+                    end={exp.end}
+                    desc={exp.desc}
+                />
+                );
+            })}
+
+            <h2 style={{marginTop: "20px"}}>Education</h2>
+            {/* TBC */}
         </section>
     )
 }

@@ -1,11 +1,25 @@
-import ".style.css";
-export default function PreviewExperience({position, company, start, end, desc}) {
-    return(
+export default function PreviewExperience({
+    id,
+    position,
+    company,
+    start,
+    end,
+    desc,
+}) {
+    return (
         <section id="preview-experience">
-            <p>Position: {position}</p>
-            <p>Company: {company}</p>
-            <p>{start} - {end}</p>
-            <p>{desc}</p>
+            <li key={id}>
+                <div id="info">
+                    <p>
+                        <strong>{position}</strong>
+                    </p>
+                    <p>
+                        <strong>{company}</strong> | {start} - {end}
+                    </p>
+                </div>
+
+                <p>{desc}</p>
+            </li>
         </section>
     )
-}
+};

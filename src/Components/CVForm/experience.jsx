@@ -1,18 +1,73 @@
-// export default function Experience({addExperience, onCompany, onExpDesc, onStart, onEnd, onPosition}) {
-//     function handleClick() {}
-//     return (
-//         <section id="Experience">
-//             <div id="experience-container">
-//                 <h2>Work Experience</h2>
-//                 <form onSubmit={addExperience}>
-//                     <input placeholder="Position" required onChange={onPosition}></input>
-//                     <input placeholder="Company" required onChange={onCompany}></input>
-//                     <input placeholder="Start Date" required onChange={onStart}></input>
-//                     <input placeholder="End Date" required onChange={onEnd}></input>
-//                     <input placeholder="Description" required onChange={onExpDesc}></input>
-//                     <button id="addbtn" className="btn" type="submit">Add</button>
-//                 </form>
-//             </div>
-//         </section>
-//     );
-// }
+export default function Experience({
+    onSubmit, 
+    experience, 
+    saveExperience, 
+    deleteExperience,
+}) {
+    return(
+        <section id="Experience">
+            <h2 style={{margin:"20px 0"}}>Work Experience</h2> 
+            {/* why double {{}}??? */}
+            {experience.map((i) => {
+                return(
+                    <div key={i.id}>
+                        <li key={i.id}>
+                            <form key={i.id} onSubmit={(e => saveExperience(e, i.id))}>
+                                <input
+                                    placeholder="Position"
+                                    required
+                                    defaultValue={i.position}>
+                                </input>
+                                <input
+                                    placeholder="Company"
+                                    required
+                                    defaultValue={i.company}>
+                                </input>
+                                <input
+                                    placeholder="Start Date"
+                                    required
+                                    defaultValue={i.start}>
+                                </input>
+                                <input
+                                    placeholder="End Date"
+                                    required
+                                    defaultValue={i.end}>
+                                </input>
+                                <input
+                                    placeholder="Description"
+                                    id="description"
+                                    required
+                                    defaultValue={i.desc}>
+                                </input>
+                                {/* Hide buttons for now? */}
+                                <div className="btn-container">
+                                    <button type="submit" className="btn btn-save">
+                                        Save
+                                    </button>
+                                    <button type="button" className="btn btn-delete" onClick={(e) => deleteExperience(i.id)}>
+                                        Delete
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </div>
+                );
+            })}
+
+            <form onSubmit={onSubmit}>
+                <input placeholder="Position" required></input>
+                <input placeholder="Company" required></input>
+                <input placeholder="Start Date" required></input>
+                <input placeholder="End Date" required></input>
+                <textarea 
+                    placeholder="Description"
+                    className="description"
+                    required
+                ></textarea>
+                <button className="btn add-btn" type="submit">
+                    Add
+                </button>
+            </form>
+        </section>
+    )
+}

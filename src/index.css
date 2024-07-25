@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+/* can be changed to customise */
+:root { 
+    --blue: #3880e5;
+    --lilac: #7d73ed;
+    --darkBlue: #2b3440;
+    --black: #050505;
+    --lightGrey: #f4f5f4
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 70%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: (auto-fit, minMax(250px, calc(1fr - 20vw)));
+    justify-content: center;
+    gap: 50px;
+}
+
+.cv-preview{
+    width: 100%;
+    list-style: none;
+    border: 3px solid var(--darkBlue);
+    height: 85vh;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: auto;
+    min-height: 80vh;
+}
+
+.cv-form {
+    width: 100%;
+    background: var(--lightGrey);
+    padding: 20px;
+    border-radius: 10px;
+    list-style: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    opacity: 90%;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 100%;
+}
+
+.add-btn {
+    background-color: #2b3440;
+    width: 100%
+}
+
+
+/* .btn-delete {
+  background-color: #c31d1d;
+  width:50%;
+}
+
+.btn-save {
+  width: 50%;
+  background-color: #28c31d;
+} */
+
+/* .btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%
+} */
+
+/* WHAT ARE THESE LAST 3 FOR? */
+input{
+  min-height: 50px;
+  border-radius: 7px;
+  border: none;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  /* min-width: 100%;
+  display: block; */
+}
+
+input:active{
+  border: 2px solid var(--darkBlue);
+}
+
+.description {
+  height: 100px;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  border:none;
+  padding: 10px;
+}
+
+/* *** NEED TO ADD ALL MEDIA QUERIES , FOOTER , HEADER AND LATEST BUTTONS *** */
