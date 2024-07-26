@@ -1,10 +1,20 @@
-import "./style.css";
-export default function PreviewEducation(){
-    <section id="education-preview">
-        <h2>Education</h2>
-        <p type="text" placeholder="Course"></p>
-        <p type="text" placeholder="University"></p>
-        <p type="text" placeholder="Start Year"></p>
-        <p type="text" placeholder="Graduated Year"></p>
-    </section>
+export default function PreviewEducation({
+    id,
+    course,
+    university,
+    end,
+    start,
+}) {
+    return (
+        <li id={id}>
+            <div id="edu-info">
+                <p>
+                    <strong>{course}</strong>
+                </p>
+                <p>
+                    <strong>{university}</strong> | {start} - {end}
+                </p>
+            </div>
+        </li>
+    );
 }

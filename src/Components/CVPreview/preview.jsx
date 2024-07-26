@@ -1,4 +1,4 @@
-// import PreviewEducation from "./PreviewEducation";
+import PreviewEducation from "./PreviewEducation";
 import PreviewExperience from "./PreviewExperience";
 import PreviewPersonal from "./PreviewPersonal";
 import "./preview.css";
@@ -14,7 +14,7 @@ export default function Preview({
     experience,
     deleteExperience,
     editExperience,
-    //   education,
+    education,
 }){
     return (
         <section className="cv-preview">
@@ -46,7 +46,18 @@ export default function Preview({
             })}
 
             <h2 style={{marginTop: "20px"}}>Education</h2>
-            {/* TBC */}
+            {education.map((edu) => {
+                return (
+                    <PreviewEducation 
+                        key={edu.id}
+                        id={edu.id}
+                        course={edu.course}
+                        university={edu.university}
+                        end={edu.end}
+                        start={edu.start}
+                    />
+                )
+            })}
         </section>
     )
 }

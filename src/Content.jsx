@@ -2,6 +2,7 @@ import { useState, useRef } from "react"; // what is useRef?
 import PersonalInfo from "./Components/CVForm/PersonalInfo";
 import Preview from "./Components/CVPreview/preview";
 import Experience from "./Components/CVForm/experience";
+import Education from "./Components/CVForm/education";
 import {v4 as uuidv4} from "uuid";
 
 export default function Content() {
@@ -14,6 +15,7 @@ export default function Content() {
     const [email, setEmail] = useState(null);
     const [phoneNumber, setPhoneNumber] = useState(null);
     const [experience, setExperience] = useState([]);
+    const [education, setEducation] = useState([]);
 
     function onFirstName(event) {
         setFirstName(event.target.value);
@@ -90,6 +92,30 @@ export default function Content() {
         );
     }
 
+    function addEducation(e) {
+        e.preventDefault();
+        console.log("Clicked on Add education");
+        const id = uuidv4();
+        const course = e.target[0].value;
+        const university = e.target[1].value;
+        const start = e.target[2].value;
+        const end = e.target[3].value;
+        let newEducation = {id, course, university, start, end};
+        setEducation([...education, newEducation]);
+        clear(e);
+    }
+
+    function saveEducation(e,id) {
+
+    }
+
+    function deleteEducation(id) {
+        setEducation((currentEducation) => {
+            return currentEducation.filter((edu) => edu.id !== id);
+        })
+    }
+
+
 
     return (
         <>
@@ -112,6 +138,13 @@ export default function Content() {
                         saveExperience={saveExperience}
                     />
 
+                    <Education
+                        addEducation={addEducation}
+                        education={education}
+                        saveEducation={saveEducation}
+                        deleteEducation={deleteEducation}
+                    />
+
                 </section>
 
                 <div className="preview">
@@ -125,6 +158,7 @@ export default function Content() {
                         address={address}
                         email={email}
                         experience={experience}
+                        education={education}
                     />
                 </div>
             </div>
