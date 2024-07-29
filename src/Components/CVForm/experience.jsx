@@ -39,7 +39,7 @@ export default function Experience({
                                     required
                                     defaultValue={i.desc}>
                                 </input>
-                                {/* Hide buttons for now? */}
+                                
                                 <div className="btn-container">
                                     <button type="submit" className="btn btn-save">
                                         Save

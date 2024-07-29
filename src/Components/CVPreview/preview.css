@@ -46,7 +46,7 @@
     word-break: break-all;
 }
   
-/* #edu-info {
+#edu-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -54,4 +54,4 @@
 
 #edu-info:nth-of-type(1) {
     margin-top: 20px;
-} */
+}

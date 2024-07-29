@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 /* can be changed to customise */
 :root { 
-    --blue: #3880e5;
-    --lilac: #7d73ed;
-    --darkBlue: #2b3440;
+    --lilac: #6c9143;
+    --darkBlue: #442e4d;
     --black: #050505;
     --lightGrey: #f4f5f4
 }
@@ -68,28 +67,28 @@
 }
 
 .add-btn {
-    background-color: #2b3440;
+    background-color: #3e2753;
     width: 100%
 }
 
 
-/* .btn-delete {
-  background-color: #c31d1d;
-  width:50%;
+.btn-delete {
+  background-color: #921414;
+  width:20%;
 }
 
 .btn-save {
-  width: 50%;
+  width: 20%;
   background-color: #28c31d;
 } */
 
-/* .btn-container {
+ .btn-container {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin-bottom: 20px;
   width: 100%
-} */
+}
 
 /* WHAT ARE THESE LAST 3 FOR? */
 input{
@@ -98,8 +97,8 @@ input{
   border: none;
   padding: 0 10px;
   margin-bottom: 10px;
-  /* min-width: 100%;
-  display: block; */
+  min-width: 100%;
+  display: block;
 }
 
 input:active{
@@ -115,4 +114,67 @@ input:active{
   padding: 10px;
 }
 
+/* HEADER AND FOOTER */
+
+#header {
+  text-align: center;
+  font-size: 2.1rem;
+  background: var(--darkBlue);
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#header h1 {
+  color: white
+}
+
+#footer {
+  background: var(--darkBlue);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  font-size: 1.2rem; 
+  font-weight: 600;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+}
+
+#footer p {
+  color: white;
+}
+
+#footer img{
+  height: 35px;
+  width: 35px;
+  
+  filter: drop-shadow(-3px 5px 10px #000);
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  transition: transform 0.9s ease-in-out;
+}
+
+#footer img:hover {
+  transform: rotate(360deg);
+}
+
+
 /* *** NEED TO ADD ALL MEDIA QUERIES , FOOTER , HEADER AND LATEST BUTTONS *** */
+
+.btn-load {
+  background-color: var(--lilac);
+  width: 100%;
+  margin-top: 5px;
+}
+
+.btn-reset {
+  background-color: #c31d1d;
+  width: 100%;
+  margin-top: 5px;
+}
