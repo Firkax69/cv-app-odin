@@ -22,3 +22,7 @@ npm install
 
 # Step 6: Start the Development Server
 npm run dev
+
+///////// Personal notes:
+Test uuidv4 on other projects;
+how to improve paragraph logic and text lines in description, make look better
