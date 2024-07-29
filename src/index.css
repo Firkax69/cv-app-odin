@@ -178,3 +178,16 @@ input:active{
   width: 100%;
   margin-top: 5px;
 }
+
+@media screen and (min-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(0px, 1fr));
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width:780px) {
+  .content {
+    width: 95vw;
+  }
+}
