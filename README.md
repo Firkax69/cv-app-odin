@@ -22,17 +22,17 @@ CSS<br/>
 Getting Started
 In order to setup and work on this project on your own, you will need to:
 
-Clone this project:
+Clone this project:<br/>
 `git clone https://github.com/renchester/cv-generator.git`
 
-Once you have cloned this project, you can install the required dependencies by using:
-npm install
+Once you have cloned this project, you can install the required dependencies by using:<br/>
+`npm install`
 
-A live demo of the project can be started by using:
-npm run preview
+A live demo of the project can be started by using:<br/>
+`npm run preview`
 
-Distribution files can be produced using:
-npm run build
+Distribution files can be produced using:<br/>
+`npm run build`
 
 -  -  -  
 
