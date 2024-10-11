@@ -4,16 +4,18 @@
 
 The main goal of this project was to build a CV generator using React. The CV generator consists of two main sections: the control and the visualization sections. In the control section, the user can input, edit and delete their information. The information inputted in the control section will be available in real-time in the visualization section. When finished, the user can then download their CV properly formatted in PDF. This project was made using React JS.
 
+Deployed on [Netlify, click to view.]([url](https://cv-form-kovalevskyi.netlify.app/))
 
-🧐 Features
-Here're some of the project's best features:
-Real-time visualization
-Users can download their CV in a formatted PDF file
 
-💻 Built with
-Technologies used in the project:
-React JS
-CSS
+🧐 Features<br/>
+Here're some of the project's best features:<br/>
+Real-time visualization<br/>
+Users can download their CV in a formatted PDF file<br/>
+
+💻 Built with<br/>
+Technologies used in the project:<br/>
+React JS<br/>
+CSS<br/>
 
 
 
@@ -21,7 +23,9 @@ Getting Started
 In order to setup and work on this project on your own, you will need to:
 
 Clone this project:
-git clone https://github.com/renchester/cv-generator.git
+<div style="background-color: #f0f0f0; padding-left: 10px;">
+  git clone https://github.com/renchester/cv-generator.git
+</div>
 
 Once you have cloned this project, you can install the required dependencies by using:
 npm install
@@ -32,34 +36,18 @@ npm run preview
 Distribution files can be produced using:
 npm run build
 
-Deployed on GitHub Pages
 -  -  -  
 
 Project Screenshots:
-
-
-
-
-
+![CVgeneratorScreenshot](https://github.com/user-attachments/assets/c2be7a78-7a6a-45e6-ab4c-7bb7b0970e6b)
 
  -  -  -
 
- What I learned
+## What I learned
 While doing this project, I learned:
 
-React Fundamentals
-Creating a react app with Create React App
-Learned other better ways for this as well, like through Vite or Next.js
-But decided to go ahead with CRA since The Odin Project recommended CRA when I started the project for learning purposes
-It probably is still fine for learning
-Class components and lifecycle methods
-Function components and Hooks
-Migrating from class components to function components
-and replacing lifecycle methods with equivalent hooks like useEffect
-Controlling inputs and rendering lists in react
-Managing state in react
-Using external libraries like Zustand, react-pdf & dndkit
-Zustand for global state management
-react-pdf for pdf generation
-dndkit for sortable drag 'n' drop lists
-Deploying a site with a PaaS like Cloudflare Pages.
+React Fundamentals<br/>
+Creating a react app with Create React App<br/>
+Function components and Hooks<br/>
+Controlling inputs and rendering lists in react<br/>
+Managing state in react<br/>
