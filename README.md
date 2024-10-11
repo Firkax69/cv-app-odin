@@ -23,9 +23,7 @@ Getting Started
 In order to setup and work on this project on your own, you will need to:
 
 Clone this project:
-<div style="background-color: #f0f0f0; padding-left: 10px;">
-  git clone https://github.com/renchester/cv-generator.git
-</div>
+`git clone https://github.com/renchester/cv-generator.git`
 
 Once you have cloned this project, you can install the required dependencies by using:
 npm install
