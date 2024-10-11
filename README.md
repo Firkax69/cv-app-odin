@@ -6,6 +6,8 @@ The main goal of this project was to build a CV generator using React. The CV ge
 
 👉 [Live version of the site can be found here](https://cv-form-kovalevskyi.netlify.app/)
 
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
 🧐 Features<br/>
 Here're some of the project's best features:<br/>
 Real-time visualization<br/>
@@ -16,7 +18,7 @@ Technologies used in the project:<br/>
 React JS<br/>
 CSS<br/>
 
-
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 
 Getting Started
 In order to setup and work on this project on your own, you will need to:
