@@ -4,8 +4,8 @@
 
 The main goal of this project was to build a CV generator using React. The CV generator consists of two main sections: the control and the visualization sections. In the control section, the user can input, edit and delete their information. The information inputted in the control section will be available in real-time in the visualization section. When finished, the user can then download their CV properly formatted in PDF. This project was made using React JS.
 
-Deployed on [Netlify, click to view.]([url](https://cv-form-kovalevskyi.netlify.app/))
-
+[Live version of the site can be found here
+]([url](https://cv-form-kovalevskyi.netlify.app/))
 
 🧐 Features<br/>
 Here're some of the project's best features:<br/>
@@ -36,7 +36,7 @@ Distribution files can be produced using:<br/>
 
 -  -  -  
 
-Project Screenshots:
+## Project Screenshots:
 ![CVgeneratorScreenshot](https://github.com/user-attachments/assets/c2be7a78-7a6a-45e6-ab4c-7bb7b0970e6b)
 
  -  -  -
