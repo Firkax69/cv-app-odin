@@ -21,7 +21,7 @@ CSS<br/>
 Getting Started
 In order to setup and work on this project on your own, you will need to:
 
-Clone this project:<br/>
+Clone this project: <br/>
 `git clone git@github.com:Firkax69/cv-app-odin.git`
 
 Once you have cloned this project, you can install the required dependencies by using:<br/>
