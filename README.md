@@ -13,7 +13,7 @@ Users can download their CV in a formatted PDF file<br/>
 
 💻 Built with<br/>
 Technologies used in the project:<br/>
-React JS<br/>
+React JS <br/>
 CSS<br/>
 
 -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
