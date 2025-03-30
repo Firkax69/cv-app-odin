@@ -47,4 +47,4 @@ React Fundamentals<br/>
 Creating a react app with Create React App<br/>
 Function components and Hooks<br/>
 Controlling inputs and rendering lists in react<br/>
-Managing state in react<br/>
+Managing state in react <br/>
