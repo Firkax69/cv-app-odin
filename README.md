@@ -6,7 +6,7 @@ The main goal of this project was to build a CV generator using React. The CV ge
  
 -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
  
-🧐 Features<br/> 
+🧐 Features<br/>  
 Here're some of the project's best features: <br/>
 Real-time visualization<br/>
 Users can download their CV in a formatted PDF file<br/>
